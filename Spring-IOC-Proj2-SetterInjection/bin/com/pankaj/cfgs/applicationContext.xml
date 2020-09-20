@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="dt" class="java.util.Date" />
+	<!-- Employee Details -->
+	<bean id="emp" class="com.pankaj.bean.Employee">
+		<property name="empname" value="Mr. Smith" />
+		<property name="empid" value="28" />
+		<property name="desg" value="Captian" />
+		<property name="salary" value="120000.00f" />
+		<property name="date" ref="dt" />
+	</bean>	
+</beans>
