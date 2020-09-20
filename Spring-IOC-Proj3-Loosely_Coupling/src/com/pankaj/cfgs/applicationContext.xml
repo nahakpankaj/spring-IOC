@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="dtdc" class="com.pankaj.bean.DTDC" />
+	<bean id="bluedart" class="com.pankaj.bean.BlueDart" />
+	<bean id="amazon" class="com.pankaj.bean.AmazonIn">
+		<property name="courier">
+			<ref bean="bluedart" />
+		</property>
+	</bean>
+
+</beans>
