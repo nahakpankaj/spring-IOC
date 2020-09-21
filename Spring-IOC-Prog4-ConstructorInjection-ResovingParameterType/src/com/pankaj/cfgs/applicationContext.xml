@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- Student Type -->
+	<bean id="std" class="com.pankaj.bean.StudentType">
+		<constructor-arg value="202011101" type="int" />
+		<constructor-arg value="89.2f" type="float" />
+		<constructor-arg value="Pankaj"
+			type="java.lang.String" />
+	</bean>
+
+	<!-- Mark Type -->
+	<bean id="mark" class="com.pankaj.bean.MarksType">
+		<constructor-arg value="82" index="3" />
+		<constructor-arg value="79" index="2" />
+		<constructor-arg value="90" index="1" />
+		<constructor-arg value="86" index="0" />
+	</bean>
+	
+	<!-- Faculty Type -->
+	<bean id="facul" class="com.pankaj.bean.FacultyType">
+		<constructor-arg value="191004" name="id"/>
+		<constructor-arg value="Java" name="subject"/>
+		<constructor-arg value="MR. NAHAK" name="fname"/>
+	</bean>
+</beans>
