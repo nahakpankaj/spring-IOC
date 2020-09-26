@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="collections" class="com.pankaj.bean.JavaCollections">
+		<!-- List call -->
+		<property name="list">
+			<list>
+				<value>Think and Grow Rich</value>
+				<value>Rich Dad And Poor Dad</value>
+				<value>Learn To Earn</value>
+				<value>The Brain Rules</value>
+			</list>
+		</property>
+		<!-- Set call -->
+		<property name="set">
+			<set>
+				<value>Napoleon Hill</value>
+				<value>Robert Kiyosaki</value>
+				<value>Peter Lynch</value>
+				<value>John Medina</value>
+				<value>Peter Lynch</value>
+			</set>
+		</property>
+		<!-- Map call -->
+		<property name="map">
+			<map>
+				<entry key="2018" value="FIFA World Cup" />
+				<entry key="2019" value="ICC World Cup" />
+				<entry key="2020" value="Corona" />
+				<entry key="2021" value="Olympics" />
+				<entry key="2022" value="FIFA, T20WC" />
+			</map>
+		</property>
+		<!-- Properties call -->
+		<property name="props">
+			<props>
+				<prop key="2016">SRH</prop>
+				<prop key="2017">MI</prop>
+				<prop key="2018">CSK</prop>
+				<prop key="2019">MI</prop>
+				<prop key="2020">?</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
