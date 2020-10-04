@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!-- Old Approach -->
+	<!-- <bean id="common" class="com.pankaj.bean.CollectionMerging" abstract="true"> 
+		<property name="subjects"> <list> <value>C</value> <value>DS</value> <value>DL</value> 
+		</list> </property> </bean> <bean id="CSE" class="com.pankaj.bean.CollectionMerging" 
+		parent="common"> <property name="subjects"> <list> <value>C</value> <value>Calculus</value> 
+		<value>Algorithms</value> <value>OS</value> </list> </property> </bean> <bean 
+		id="EEE" class="com.pankaj.bean.CollectionMerging" parent="common"> <property 
+		name="subjects"> <list> <value>DB</value> <value>CN</value> <value>CD</value> 
+		<value>TOC</value> </list> </property> </bean> -->
+	<!-- Approach 2 -->
+	<bean id="commons" class="com.pankaj.bean.CollectionMerging"
+		abstract="true">
+		<property name="subjects">
+			<list>
+				<value>C</value>
+				<value>DS</value>
+				<value>DL</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="CSE" class="com.pankaj.bean.CollectionMerging"
+		parent="commons">
+		<property name="subjects">
+			<list merge="true">
+				<value>Algorithms</value>
+				<value>Calculus</value>
+				<value>OS</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="EEE" class="com.pankaj.bean.CollectionMerging"
+		parent="commons">
+		<property name="subjects">
+			<list merge="true">
+				<value>DS</value>
+				<value>TOC</value>
+				<value>DB</value>
+			</list>
+		</property>
+	</bean>
+</beans>
