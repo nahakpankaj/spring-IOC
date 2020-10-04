@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="tour1" class="com.pankaj.bean.TourPlan">
+		<property name="places">
+			<list>
+				<value>Canada</value>
+				<value>New Jersey</value>
+				<value>Cape Town</value>
+				<value>UK</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="tour2" class="com.pankaj.bean.TourPlan">
+		<property name="places">
+			<list>
+				<value>New Zealand</value>
+				<value>Bali</value>
+				<value>Moscow</value>
+				<value>Berlin</value>
+			</list>
+		</property>
+	</bean>
+	<!-- autowire="constructor"(or)"byType"(ambiguity problem) -->
+	<bean id="target" class="com.pankaj.bean.TravelAgnet"
+		autowire="constructor">
+		<constructor-arg ref="tour1" />
+	</bean>
+</beans>
