@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<!-- Old Approach -->
+	<!-- <bean id = "bike" class="com.pankaj.bean.BeanIneritance"> <property 
+		name="brand" value="Hero"/> <property name="model" value="Xtreme"/> <property 
+		name="color" value="white"/> <property name="cc" value="125"/> <property 
+		name="milage" value="55.3f"/> <property name="price" value="77000"/> </bean> 
+		<bean id = "bike1" class="com.pankaj.bean.BeanIneritance"> <property name="brand" 
+		value="Hero"/> <property name="model" value="Splender+"/> <property name="color" 
+		value="red"/> <property name="cc" value="110"/> <property name="milage" value="65.9f"/> 
+		<property name="price" value="72000"/> </bean> <bean id = "bike2" class="com.pankaj.bean.BeanIneritance"> 
+		<property name="brand" value="Hero"/> <property name="model" value="HF Deluxe"/> 
+		<property name="color" value="sky blue"/> <property name="cc" value="100"/> 
+		<property name="milage" value="69.3f"/> <property name="price" value="69000"/> 
+		</bean> -->
+	<!-- Improved solution -->
+	<bean id="bike" class="com.pankaj.bean.BeanInheritance"
+		abstract="true">
+		<property name="brand" value="Hero" />
+		<property name="model" value="Splender+" />
+		<property name="milage" value="71.3f" />
+	</bean>
+	<bean id="bike1" class="com.pankaj.bean.BeanInheritance"
+		parent="bike">
+		<property name="color" value="gray" />
+		<property name="cc" value="100" />
+		<property name="price" value="71000" />
+	</bean>
+	<bean id="bike2" class="com.pankaj.bean.BeanInheritance"
+		parent="bike">
+		<property name="color" value="green" />
+		<property name="cc" value="110" />
+		<property name="price" value="72500" />
+	</bean>
+</beans>
