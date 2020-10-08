@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="loanId" class="com.pankaj.bean.LoanDetails">
+		<property name="londId" value="120221" />
+		<property name="loadType" value="Home loan" />
+		<property name="customer" value="mr. Kesav" />
+	</bean>
+	<bean id="approver" class="com.pankaj.bean.BankLoanApprover">
+		<property name="loanDetails" ref="loanId" />
+	</bean>
+</beans>
